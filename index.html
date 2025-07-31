@@ -64,7 +64,6 @@
     </style>
 </head>
 <body class="bg-brand-primary-light text-brand-text-light dark:bg-brand-primary-dark dark:text-brand-text-dark font-sans antialiased transition-colors duration-500">
-
     <!-- Header / Navigation Bar -->
     <header class="bg-white/80 dark:bg-brand-primary-dark/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -78,7 +77,7 @@
                 <a href="#portfolio" class="hover:text-brand-accent transition-colors duration-300">Portfolio</a>
                 <a href="#pricing" class="hover:text-brand-accent transition-colors duration-300">Pricing</a>
                 <div class="flex items-center space-x-4">
-                    <a href="https:/wa.me/+917863081437" class="bg-brand-accent text-white px-5 py-2 rounded-full font-semibold hover:bg-brand-accent-hover transition-colors duration-300 text-sm">Contact Us</a>
+                    <a href="https://forms.gle/2WiTjhFSiqRtPzEL7" class="bg-brand-accent text-white px-5 py-2 rounded-full font-semibold hover:bg-brand-accent-hover transition-colors duration-300 text-sm">Contact Us</a>
                     <!-- Theme Toggle Button -->
                     <button id="theme-toggle" class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-brand-secondary-dark transition-colors duration-300">
                         <svg id="theme-toggle-dark-icon" class="hidden h-5 w-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
@@ -86,8 +85,21 @@
                     </button>
                 </div>
             </div>
-            <div class="md:hidden">
-                <!-- Mobile Menu Button can be added here -->
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden" x-data="{ open: false }">
+                <button @click="open = !open" class="p-2">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                <!-- Mobile Menu -->
+                <div x-show="open" @click.away="open = false" class="absolute right-0 mt-2 w-48 bg-white dark:bg-brand-secondary-dark rounded-md shadow-lg">
+                    <a href="#about" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                    <a href="#services" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Services</a>
+                    <a href="#portfolio" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Portfolio</a>
+                    <a href="#pricing" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Pricing</a>
+                    <a href="https:/wa.me/+917863081437" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact Us</a>
+                </div>
             </div>
         </nav>
     </header>
@@ -105,7 +117,7 @@
                             We fuse data-driven strategies with creative innovation to build technology that delivers measurable impact and elevates your brand.
                         </p>
                         <a href="#contact" class="bg-brand-accent text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-brand-accent-hover transition-transform transform hover:scale-105 duration-300 inline-block">
-                            Start Your Project
+                            Explore Our Services
                         </a>
                     </div>
                     <div class="hidden md:block">
