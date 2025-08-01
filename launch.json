@@ -8,7 +8,7 @@
             "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\admin\\OneDrive\\Documents\\basedon\\1.html"
+            "file": "c:\\Users\\admin\\OneDrive\\Documents\\basedon\\index.html"
         }
     ]
 }
